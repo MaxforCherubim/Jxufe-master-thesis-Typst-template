@@ -56,96 +56,87 @@
   )
 }
 
+//! 以下元素全部居中
+#set align(center)
+
 //! 硕士学位论文/MASTER DISSERTATION
 #v(183pt)
 #{
   set text(font: "Microsoft YaHei", size: 45pt, tracking: 10pt)
   set par(leading: 1em, spacing: 35pt)
-  align(center, "硕士学位论文")
+  [硕士学位论文]
 }
 #{
   set text(font: "STZhongsong", size: zh(1))
   set par(leading: 1em)
-  align(center, "MASTER DISSERTATION")
+  [MASTER DISSERTATION]
 }
 
 //! 论文题目（中英）
 #v(2*16.1pt)
-#align(
-  center,
-  table(
-    columns: (2.69cm, 11.49cm),
-    rows: 1.1cm,
-    align: center + horizon,
-    stroke: none,
-    text(font: "SimHei", size: zh(-3))[论文题目],
-    text(font: "KaiTi", size: zh(3))[基于元学习的],
-    table.hline(stroke: 0.5pt, start: 1),
-    text(font: "SimHei", size: zh(4))[（中文）],
-    text(font: "STZhongsong", size: zh(4))[财务舞弊识别研究],
-    table.hline(stroke: 0.5pt, start: 1),
-    text(font: "SimHei", size: zh(-3))[论文题目],
-    text(font: "Times New Roman", size: zh(3))[Research on Financial Fraud Identification],
-    table.hline(stroke: 0.5pt, start: 1),
-    text(font: "SimHei", size: zh(4))[（英文）],
-    text(font: "STZhongsong", size: zh(3))[Based on Meta-learning],
-    table.hline(stroke: 0.5pt, start: 1)
-  )
+#table(
+  columns: (2.69cm, 11.49cm),
+  rows: 1.1cm,
+  align: center + horizon,
+  stroke: none,
+  text(font: "SimHei", size: zh(-3))[论文题目],
+  text(font: "KaiTi", size: zh(3))[基于元学习的],
+  table.hline(stroke: 0.5pt, start: 1),
+  text(font: "SimHei", size: zh(4))[（中文）],
+  text(font: "STZhongsong", size: zh(4))[财务舞弊识别研究],
+  table.hline(stroke: 0.5pt, start: 1),
+  text(font: "SimHei", size: zh(-3))[论文题目],
+  text(font: "Times New Roman", size: zh(3))[Research on Financial Fraud Identification],
+  table.hline(stroke: 0.5pt, start: 1),
+  text(font: "SimHei", size: zh(4))[（英文）],
+  text(font: "STZhongsong", size: zh(3))[Based on Meta-learning],
+  table.hline(stroke: 0.5pt, start: 1)
 )
 
 //! 作者信息
 #v(5pt)
-#align(
-  center,
-  table(
-    columns: (2.44cm, 4.88cm, 0.42cm, 2.45cm, 4.26cm),
-    rows: 1.06cm,
-    align: center + bottom,
-    stroke: none,
-    text(font: "SimHei", size: zh(4))[
-      #distr(width: 4em, "作者")
-    ],
-    text(font: "KaiTi", size: zh(-3))[章迎潭],
-    none,
-    text(font: "SimHei", size: zh(4))[
-      #distr(width: 4em, "导师")
-    ],
-    text(font: "SimHei", size: zh(4))[马海强],
-    table.hline(stroke: 0.5pt, start: 1, end: 2),
-    table.hline(stroke: 0.5pt, start: 4),
-    text(font: "SimHei", size: zh(4))[
-      #distr(width: 4em, "申请学位")
-    ],
-    text(font: "KaiTi", size: zh(-3))[硕士],
-    none,
-    text(font: "SimHei", size: zh(4))[
-      #distr(width: 4em, "学院名称")
-    ],
-    text(font: "SimHei", size: zh(4))[统计与数据科学],
-    table.hline(stroke: 0.5pt, start: 1, end: 2),
-    table.hline(stroke: 0.5pt, start: 4),
-    text(font: "SimHei", size: zh(4))[
-      #distr(width: 4em, "学科专业")
-    ],
-    text(font: "KaiTi", size: zh(-3))[应用统计],
-    none,
-    text(font: "SimHei", size: zh(4))[
-      #distr(width: 4em, "研究方向")
-    ],
-    text(font: "KaiTi", size: zh(-3))[机器学习],
-    table.hline(stroke: 0.5pt, start: 1, end: 2),
-    table.hline(stroke: 0.5pt, start: 4),
-  )
+#table(
+  columns: (2.44cm, 4.88cm, 0.42cm, 2.45cm, 4.26cm),
+  rows: 1.06cm,
+  align: center + bottom,
+  stroke: none,
+  text(font: "SimHei", size: zh(4))[
+    #distr(width: 4em, "作者")
+  ],
+  text(font: "KaiTi", size: zh(-3))[章迎潭],
+  none,
+  text(font: "SimHei", size: zh(4))[
+    #distr(width: 4em, "导师")
+  ],
+  text(font: "SimHei", size: zh(4))[马海强],
+  table.hline(stroke: 0.5pt, start: 1, end: 2),
+  table.hline(stroke: 0.5pt, start: 4),
+  text(font: "SimHei", size: zh(4))[
+    #distr(width: 4em, "申请学位")
+  ],
+  text(font: "KaiTi", size: zh(-3))[硕士],
+  none,
+  text(font: "SimHei", size: zh(4))[
+    #distr(width: 4em, "学院名称")
+  ],
+  text(font: "SimHei", size: zh(4))[统计与数据科学],
+  table.hline(stroke: 0.5pt, start: 1, end: 2),
+  table.hline(stroke: 0.5pt, start: 4),
+  text(font: "SimHei", size: zh(4))[
+    #distr(width: 4em, "学科专业")
+  ],
+  text(font: "KaiTi", size: zh(-3))[应用统计],
+  none,
+  text(font: "SimHei", size: zh(4))[
+    #distr(width: 4em, "研究方向")
+  ],
+  text(font: "KaiTi", size: zh(-3))[机器学习],
+  table.hline(stroke: 0.5pt, start: 1, end: 2),
+  table.hline(stroke: 0.5pt, start: 4),
 )
 
 //! 年月
 #v(60pt)
-#align(
-  center,
-  text(font: "SimHei", size: zh(-2))[
-    #number_to_chinese(2025)年#number_to_chinese(4)月
-  ]
-)
-
-//! 分页符
-#pagebreak()
+#text(font: "SimHei", size: zh(-2))[
+  #number_to_chinese(2025)年#number_to_chinese(4)月
+]
