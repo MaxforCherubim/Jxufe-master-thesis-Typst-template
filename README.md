@@ -28,7 +28,7 @@
 
 ## 注意事项​
 
-1. 本项目较为傻瓜，安装好Typst和Vscode对应的Tinymist Typst插件后，就可以运行本项目，完成自己的论文而无需关系格式问题。如果过程中产生了多种问题，请在[讨论区](https://github.com/MaxforCherubim/Jxufe-thesis-defence-Revealjs-template/discussions)创建相关讨论，我都会尽力解答的
+1. 本项目较为傻瓜，安装好Typst和Vscode对应的Tinymist Typst插件后，就可以运行本项目，完成自己的论文而无需关系格式问题。如果在使用过程中产生了多种问题，请在[讨论区](https://github.com/MaxforCherubim/Jxufe-thesis-defence-Revealjs-template/discussions)创建相关讨论，我都会尽力解答的
 2. 由于Tpyst也在不断更新，可能会导致本项目产生Bug，除此之外还可能会有其他Bug，请在Github上提交[issues](https://github.com/MaxforCherubim/Jxufe-thesis-defence-Revealjs-template/issues)，我会及时修复
 
 ## 贡献指南​
