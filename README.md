@@ -2,7 +2,18 @@
 
 # 江西财经大学硕士毕业论文Typst模板
 
+![GitHub License](https://img.shields.io/github/license/MaxforCherubim/Jxufe-master-thesis-Typst-template)
+
 为酱菜学子提供方便好用的硕士毕业论文Typst模板
+
+## 目录
+
+- [项目概述​](#项目概述)
+- [使用方法​](#使用方法)
+- [注意事项​](#注意事项)
+- [贡献指南​](#贡献指南)
+- [联系方式​](#联系方式)
+- [许可证信息​](#许可证信息)
 
 ## 项目概述​
 
@@ -45,3 +56,5 @@
 ## 许可证信息​
 
 本项目开源许可证为[MIT license](https://opensource.org/license/mit/)
+
+[回到顶部](#目录)
