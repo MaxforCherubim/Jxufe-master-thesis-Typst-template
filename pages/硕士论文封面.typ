@@ -1,4 +1,10 @@
 #import "@preview/pointless-size:0.1.1": zh
+#set page(margin: (
+  top: 3.5cm,
+  bottom: 2.5cm,
+  left: 2.5cm,
+  right: 2.5cm,
+))
 #let distr(width: auto, body) = {
   block(
     width: width,
@@ -20,12 +26,6 @@
   }
   return result
 }
-#set page(margin: (
-  top: 3.5cm,
-  bottom: 2.5cm,
-  left: 2.5cm,
-  right: 2.5cm
-))
 
 //! 封面logo
 #place(
@@ -72,7 +72,7 @@
   [MASTER DISSERTATION]
 }
 
-//! 论文题目（中英）
+//? 论文题目（中英）
 #v(2*16.1pt)
 #table(
   columns: (2.69cm, 11.49cm),
@@ -93,7 +93,7 @@
   table.hline(stroke: 0.5pt, start: 1)
 )
 
-//! 作者信息
+//? 作者信息
 #v(5pt)
 #table(
   columns: (2.44cm, 4.88cm, 0.42cm, 2.45cm, 4.26cm),
@@ -135,7 +135,7 @@
   table.hline(stroke: 0.5pt, start: 4),
 )
 
-//! 年月
+//? 年月
 #v(60pt)
 #text(font: "SimHei", size: zh(-2))[
   #number_to_chinese(2025)年#number_to_chinese(4)月
