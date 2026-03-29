@@ -30,6 +30,7 @@
     left: 2.5cm,
     right: 2.5cm,
   ),
+  header-ascent: 0.5cm,
   header: context [
     #set text(font: ("Times New Roman", "SimSun"), size: zh(5))
     #set align(center + bottom)
@@ -40,6 +41,7 @@
       calc-headings(query(heading.where(level: 1))).at(here().page() - 1)
     }
     #head-text
+    #v(-6pt)
     #line(length: 100%, stroke: 0.5pt)
   ],
   footer: context [
@@ -50,14 +52,21 @@
 )
 #show heading.where(level: 1): it => {
   set align(center)
-  set text(font: ("Times New Roman", "SimHei"), size: zh(-3))
+  set par(spacing: 2em)
+  set text(
+    font: ("Times New Roman", "SimHei"),
+    size: zh(-3),
+    top-edge: 1.5em,
+    // bottom-edge: 12pt
+  )
   it
-  v(1em)
+  v(1.5em)
 }
 #set par(
   justify: true,
   first-line-indent: (amount: 2em, all: true),
   leading: 1em,
+  spacing: 1em,
 )
 #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
 
@@ -78,9 +87,8 @@
 
 = Abstract
 
-
 Text text text text text text text text text text text text text text text text text text text text text text text text text text text text.
 
 #v(1em)
 
-*Key Words:* keyword1; keyword2; keyword3; keyword4.
+*Key Words:* keyword1; keyword2; keyword3; keyword4
