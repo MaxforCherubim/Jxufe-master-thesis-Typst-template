@@ -65,65 +65,90 @@
   set heading(
     numbering: numblex(
       "
-    {[1    ]:d==1;[1]:d==2;[1]:d==3}
-    {[.1    ]:d==2;[.1]:d==3}
-    {[.1    ]:d==3;}
-    {        ([1]):d==4}
+    {[1   ]:d==1;[1]:d==2;[1]:d==3}
+    {[.1   ]:d==2;[.1]:d==3}
+    {[.1   ]:d==3;}
+    {        （[1]）:d==4}
     {        [①]:d==5}
     ",
     ),
   )
-  show heading.where(level: 1): it => {
-    show h.where(amount: 0.3em): none
-    it //h是Typst的内置“间距原语”
-  }
 
   //! 设置标题格式
   show heading: set text(weight: "regular")
   show heading.where(level: 1): it => {
+    set block(
+      inset: (top: 0.5em, right: 0em, bottom: 0em, left: 0em),
+      // outset: 1em,
+      spacing: 1.5em,
+    )
     set text(
       font: ("Times New Roman", "SimHei"),
       size: zh(-3),
-      top-edge: 1.5em,
+      // top-edge: 1.4em,
+      // bottom-edge: 0.5em,
     )
     //! 第一个一级标题之前（含自身）就一个，所以大于1就分页
     if query(heading.where(level: 1).before(here())).len() > 1 {
-      pagebreak() + it
+      pagebreak()
+      it
     } else {
       it
     }
-    v(0.5em)
   }
   show heading.where(level: 2): it => {
+    set block(
+      inset: (top: 0.5em, right: 0em, bottom: 0em, left: 0em),
+      // outset: 1em,
+      spacing: 1em,
+    )
     set text(
       font: ("Times New Roman", "SimHei"),
       size: zh(4),
-      top-edge: 1.5em,
+      // top-edge: 0.5em,
+      // bottom-edge: 1em,
     )
-    v(0.5em)
     it
-    v(0.5em)
   }
   show heading.where(level: 3): it => {
+    set block(
+      inset: (top: 0em, right: 0em, bottom: 0em, left: 0em),
+      // outset: 1em,
+      // spacing: 1em,
+    )
     set text(
       font: ("Times New Roman", "SimHei"),
       size: zh(-4),
-    )
-    v(0.5em)
-    it
-    v(0.5em)
-  }
-  show heading.where(level: 4): it => {
-    set text(
-      font: ("Times New Roman", "SimSun"),
-      size: zh(-4),
+      // top-edge: 0.8em,
+      // bottom-edge: 1em,
     )
     it
   }
   show heading.where(level: 4): it => {
+    set block(
+      // inset: (top: -1em, right: 0em, bottom: 0em, left: 0em),
+      // outset: 1em,
+      // spacing: 1em,
+    )
     set text(
       font: ("Times New Roman", "SimSun"),
       size: zh(-4),
+      top-edge: 0em,
+      bottom-edge: 0em,
+    )
+    it
+  }
+  show heading.where(level: 5): it => {
+    set block(
+      // inset: (top: 0em, right: 0em, bottom: 0em, left: 0em),
+      // outset: 1em,
+      // spacing: 1em,
+    )
+    set text(
+      font: ("Times New Roman", "SimSun"),
+      size: zh(-4),
+      top-edge: 0em,
+      bottom-edge: 0em,
     )
     it
   }
@@ -132,7 +157,7 @@
   set par(
     justify: true,
     first-line-indent: (amount: 2em, all: true),
-    leading: 1em,
+    leading: 0.5em,
     spacing: 1em,
   )
 
@@ -145,6 +170,8 @@
     size: zh(-4),
     lang: "zh",
     region: "cn",
+    top-edge: "ascender",
+    bottom-edge: "descender",
   )
   doc
 }

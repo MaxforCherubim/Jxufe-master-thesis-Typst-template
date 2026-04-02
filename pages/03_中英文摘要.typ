@@ -1,5 +1,6 @@
 #import "@preview/cuti:0.4.0": show-cn-fakebold
 #import "@preview/pointless-size:0.1.1": zh
+#import "@preview/kouhu:0.2.0": kouhu
 #let calc-headings(headings) = {
   let max-page-num = calc.max(..headings.map(i => i.location().page()))
   let first-headings = (none,) * max-page-num
@@ -52,17 +53,16 @@
   ],
 )
 #show heading: set text(weight: "regular")
+#show heading: set block(above: 0pt, below: 0pt)
 #show heading.where(level: 1): it => {
   set align(center)
-  set par(spacing: 2em)
   set text(
     font: ("Times New Roman", "SimHei"),
     size: zh(-3),
     top-edge: 1.5em,
-    // bottom-edge: 12pt
   )
   it
-  v(1.5em)
+  v(2em)
 }
 #set par(
   justify: true,
@@ -75,7 +75,9 @@
 //! 中文摘要
 = 摘#h(2em)要
 
-文本文本文本文本文本文本文本文本文本#lorem(20)文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文。
+#kouhu(indices: 1, length: 20)
+#lorem(10)
+#kouhu(indices: 2, length: 10)
 
 #text(fill: red)[摘要内容和关键词之间空一行]
 
@@ -89,7 +91,7 @@
 
 = Abstract
 
-Text text text text text text text text text text text text text text text text text text text text text text text text text text text text.
+#lorem(20)
 
 #v(1em)
 
