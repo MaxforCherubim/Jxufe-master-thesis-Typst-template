@@ -3,6 +3,7 @@
 #import "@preview/itemize:0.2.0" as el
 #import "@preview/numblex:0.2.0": numblex
 #import "@preview/kouhu:0.2.0": kouhu
+#import "three-line-table.typ": *
 
 #let typeset(doc) = {
   show: show-cn-fakebold
@@ -41,6 +42,7 @@
     ),
     header-ascent: 0.5cm,
     header: context [
+      #set par(spacing: 0.9em)
       #set text(font: ("Times New Roman", "SimSun"), size: zh(5))
       #set align(center + bottom)
       #let is-odd = calc.odd(here().page())
@@ -91,9 +93,9 @@
     //! 第一个一级标题之前（含自身）就一个，所以大于1就分页
     if query(heading.where(level: 1).before(here())).len() > 1 {
       pagebreak()
-      it
+      it + counter(figure).update(0)
     } else {
-      it
+      it + counter(figure).update(0)
     }
   }
   show heading.where(level: 2): it => {
@@ -158,7 +160,7 @@
     justify: true,
     first-line-indent: (amount: 2em, all: true),
     leading: 0.5em,
-    spacing: 1em,
+    spacing: 0.5em,
   )
 
   //! 设置正文格式
@@ -173,5 +175,47 @@
     top-edge: "ascender",
     bottom-edge: "descender",
   )
+
+  //! 设置figure格式
+  set figure.caption(separator: "  ")
+  show figure: set figure(
+    numbering: _ => [#counter(heading.where(level: 1)).display("1").#counter(figure).display("1")],
+  )
+
+  //! 其中插入图片格式
+  show image: it => {
+    v(1em)
+    it
+  }
+  show figure.where(kind: image): set figure.caption(position: bottom)
+
+  //! 其中插入表格格式
+  show table: it => {
+    v(1em)
+    it
+  }
+  show figure.where(kind: table): set figure.caption(position: top)
+
+  //! 其中插入公式格式
+  show math.equation: it => {
+    it
+  }
+
+  //todo 其中插入代码格式
+
+  //! 设置脚注格式
+  show footnote.entry: set text(
+    font: ("Times New Roman", "SimSun"),
+    size: zh(-5),
+  )
+  set footnote.entry(
+    indent: 0em,
+    separator: line(
+      length: 30%,
+      stroke: 0.5pt,
+    ),
+  )
+  set footnote(numbering: "①")
+
   doc
 }
