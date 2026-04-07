@@ -72,10 +72,45 @@ Context.
 
 = 模型构建
 
+#kouhu(indices: 2, length: 50)
 #figure(
-  tlt("../tables/三线表.xlsx"),
+  tlt("../tables/筛分粒度组成.xlsx"),
   caption: "筛分粒度组成",
 ) <表1>
 注：如有需要可对表格进行注释说明。
 
-数据来源：如需对#[@表1]来源进行说明，请参照此格式。
+数据来源：如需对#[@表1]来源进行说明，参照此格式@刘星2014恶意代码的函数调用图相似性分析。
+
+= 实证分析
+
+公式格式问题
+
+行间公式。
+
+$ x + y = z $
+
+= 实际案例研究
+
+= 结论与展望
+
+//! 参考文献
+#show heading.where(level: 1): set align(center)
+#bibliography(
+  "../refs.bib",
+  style: "gb-7714-2015-numeric",
+  title: align(horizon)[参 考 文 献],
+)
+
+//! 附录
+#heading(
+  align(center)[附录],
+  level: 1,
+  numbering: none,
+)
+
+//! 致谢
+#heading(
+  align(center)[致#h(2em)谢],
+  level: 1,
+  numbering: none,
+)

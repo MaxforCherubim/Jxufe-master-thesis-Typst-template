@@ -190,11 +190,13 @@
   show figure.where(kind: image): set figure.caption(position: bottom)
 
   //! 其中插入表格格式
-  show table: it => {
+  show figure.where(kind: table): set figure(gap: 0.2em)
+  show figure.where(kind: table): it => {
+    set figure.caption(position: top)
     v(1em)
     it
   }
-  show figure.where(kind: table): set figure.caption(position: top)
+  show table: set text(size: zh(5))
 
   //! 其中插入公式格式
   show math.equation: it => {
@@ -216,6 +218,12 @@
     ),
   )
   set footnote(numbering: "①")
+
+  //! 设置参考文献格式
+  show bibliography: it => {
+    set text(size: zh(5))
+    it
+  }
 
   doc
 }
