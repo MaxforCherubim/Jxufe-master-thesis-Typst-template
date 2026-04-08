@@ -5,15 +5,15 @@
 
 == 研究背景与意义
 
-#kouhu(indices: 1, length: 20)
+#kouhu(builtin-text: "aspirin", indices: 1, length: 20)
 #lorem(10)
-#kouhu(indices: 2, length: 10)
+#kouhu(builtin-text: "aspirin", indices: 2, length: 10)
 
 === 文献评述
 
-#kouhu(indices: 1, length: 20)
+#kouhu(builtin-text: "aspirin", indices: 1, length: 20)
 #lorem(10)
-#kouhu(indices: 2, length: 10)
+#kouhu(builtin-text: "aspirin", indices: 2, length: 10)
 
 === Test
 
@@ -21,36 +21,36 @@ Context.
 
 = 理论基础
 
-#kouhu(indices: 1, length: 20)
+#kouhu(builtin-text: "aspirin", indices: 1, length: 20)
 #lorem(10)
-#kouhu(indices: 2, length: 40)
+#kouhu(builtin-text: "aspirin", indices: 2, length: 40)
 
 == 概念定义
 
-#kouhu(indices: 1, length: 20)
+#kouhu(builtin-text: "aspirin", indices: 1, length: 20)
 #lorem(10)
-#kouhu(indices: 2, length: 10)
+#kouhu(builtin-text: "aspirin", indices: 2, length: 10)
 
 === 研究内容
 
-#kouhu(indices: 1, length: 20)
+#kouhu(builtin-text: "aspirin", indices: 1, length: 20)
 #lorem(10)
-#kouhu(indices: 2, length: 10)
+#kouhu(builtin-text: "aspirin", indices: 2, length: 10)
 
 ==== 四级标题
 
-#kouhu(indices: 1, length: 20)
+#kouhu(builtin-text: "aspirin", indices: 1, length: 20)
 #lorem(10)
-#kouhu(indices: 2, length: 40)
+#kouhu(builtin-text: "aspirin", indices: 2, length: 40)
 
 ===== 五级标题
 
-#kouhu(indices: 1, length: 20)
+#kouhu(builtin-text: "aspirin", indices: 1, length: 20)
 #lorem(10)
-#kouhu(indices: 2, length: 10)
+#kouhu(builtin-text: "aspirin", indices: 2, length: 10)
 #figure(
   image("../imgs/论文流程图.png", width: 90%),
-  caption: "论文流程图",
+  caption: [论文流程图],
 ) <图2.1>
 
 = 数据集构建
@@ -60,7 +60,7 @@ Context.
 数据清洗流程图如下#[@图3.1]所示
 #figure(
   image("../imgs/数据清洗流程图.png", width: 90%),
-  caption: "数据清洗流程图",
+  caption: [数据清洗流程图],
 ) <图3.1>
 注：如有需要可对图片进行注释说明。
 
@@ -68,14 +68,14 @@ Context.
 
 #linebreak()
 
-脚注#footnote("脚注文本")
+脚注#footnote([脚注文本])
 
 = 模型构建
 
-#kouhu(indices: 2, length: 50)
+#kouhu(builtin-text: "aspirin", indices: 2, length: 50)
 #figure(
   tlt("../tables/筛分粒度组成.xlsx"),
-  caption: "筛分粒度组成",
+  caption: [筛分粒度组成],
 ) <表1>
 注：如有需要可对表格进行注释说明。
 
@@ -87,7 +87,19 @@ Context.
 
 行间公式。
 
-$ x + y = z $
+$ x + y = z $<test>
+
+#kouhu(builtin-text: "aspirin", indices: 2, length: 20)@test
+
+$ t f i d f(w, d) = n_w / n_d dot log N / (N_w + 1) $
+
+#kouhu(builtin-text: "aspirin", indices: 2, length: 20)
+
+$ n_w / n_d dot log N / (N_w + 1) $
+
+#kouhu(builtin-text: "aspirin", indices: 2, length: 20)
+
+使用Word自带公式书写行内公式 $x + y = z$。
 
 = 实际案例研究
 
@@ -98,7 +110,7 @@ $ x + y = z $
 #bibliography(
   "../refs.bib",
   style: "gb-7714-2015-numeric",
-  title: align(horizon)[参 考 文 献],
+  title: [参 考 文 献],
 )
 
 //! 附录
@@ -107,6 +119,7 @@ $ x + y = z $
   level: 1,
   numbering: none,
 )
+#kouhu(builtin-text: "aspirin", indices: 2, length: 50)
 
 //! 致谢
 #heading(
@@ -114,3 +127,9 @@ $ x + y = z $
   level: 1,
   numbering: none,
 )
+#kouhu(builtin-text: "aspirin", indices: 2, length: 100)
+#v(2em)
+#set align(right)
+姓名#h(2em)
+
+#datetime.today().display("[year]年[month padding:none]月")

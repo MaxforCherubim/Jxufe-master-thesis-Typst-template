@@ -199,11 +199,27 @@
   show table: set text(size: zh(5))
 
   //! 其中插入公式格式
-  show math.equation: it => {
+  // show math.equation: set text(font: "Times New Roman")
+  show ref: it => {
+    let el = it.element
+    if el == none or el.func() != math.equation { return it }
+    link(el.location(), numbering(
+      _ => [式#counter(heading.where(level: 1)).display("1").#counter(math.equation).display("1")],
+      ..counter(math.equation).at(el.location()),
+    ))
+  }
+  set math.equation(
+    numbering: _ => text(font: "Times New Roman")[(#counter(heading.where(level: 1)).display("1").#counter(math.equation).display("1"))],
+  )
+  show math.equation.where(block: true): it => {
+    v(1em)
     it
+    v(1em)
   }
 
   //todo 其中插入代码格式
+
+  //todo 其中插入伪代码格式
 
   //! 设置脚注格式
   show footnote.entry: set text(
