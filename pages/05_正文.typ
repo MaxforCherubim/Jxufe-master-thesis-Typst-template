@@ -107,26 +107,17 @@ $ n_w / n_d dot log N / (N_w + 1) $
 
 //! 参考文献
 #show heading.where(level: 1): set align(center)
+#set heading(level: 1, numbering: none)
 #bibliography(
   "../refs.bib",
   style: "gb-7714-2015-numeric",
   title: [参 考 文 献],
 )
 
-//! 附录
-#heading(
-  align(center)[附录],
-  level: 1,
-  numbering: none,
-)
+= 附录
 #kouhu(builtin-text: "aspirin", indices: 2, length: 50)
 
-//! 致谢
-#heading(
-  align(center)[致#h(2em)谢],
-  level: 1,
-  numbering: none,
-)
+= 致#h(2em)谢
 #kouhu(builtin-text: "aspirin", indices: 2, length: 100)
 #v(2em)
 #set align(right)

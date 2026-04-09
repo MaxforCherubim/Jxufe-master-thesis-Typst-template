@@ -71,6 +71,7 @@
   spacing: 1em,
 )
 #set text(font: ("Times New Roman", "SimSun"), size: zh(-4))
+// #counter(page).update(1)
 
 //! 中文摘要
 = 摘#h(2em)要
@@ -89,7 +90,7 @@
 
 //! 英文摘要
 
-= Abstract
+#heading(outlined: false)[Abstract]
 
 #lorem(20)
 

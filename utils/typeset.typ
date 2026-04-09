@@ -209,7 +209,9 @@
     ))
   }
   set math.equation(
-    numbering: _ => text(font: "Times New Roman")[(#counter(heading.where(level: 1)).display("1").#counter(math.equation).display("1"))],
+    numbering: _ => text(
+      font: "Times New Roman",
+    )[(#counter(heading.where(level: 1)).display("1").#counter(math.equation).display("1"))],
   )
   show math.equation.where(block: true): it => {
     v(1em)
