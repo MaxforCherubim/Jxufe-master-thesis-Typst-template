@@ -2,3 +2,5 @@
 /tmp.typ
 /references/HUST-typst-template
 /references/modern-nju-thesis
+*.baiduyun.*
+~$*.doc*

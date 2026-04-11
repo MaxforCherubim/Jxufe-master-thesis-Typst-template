@@ -1,7 +1,5 @@
 #import "template.typ": *
 
-#show: typeset-fore
-
 //! 封面
 #cover(
   zh-title1: [论文],
@@ -12,6 +10,7 @@
 #declaration()
 
 //! 摘要
+#show: typeset-fore
 #abstract(
   zh-abstract: kouhu(builtin-text: "aspirin", indices: 1, length: 100),
   en-abstract: lorem(50),
@@ -20,11 +19,9 @@
 //! 目录
 #multi-outline()
 
-
-#show: typeset-back
-
 //! 正文
-= 绪论
+#show: typeset-back
+= 绪论 <first>
 
 == 研究背景与意义
 
