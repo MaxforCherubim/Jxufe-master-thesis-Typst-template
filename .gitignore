@@ -1,2 +1,4 @@
 .DS_Store
-tmp.typ
+/tmp.typ
+/references/HUST-typst-template
+/references/modern-nju-thesis
